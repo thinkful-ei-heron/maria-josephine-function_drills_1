@@ -17,3 +17,11 @@ try{
     console.error(e)
 }
 console.log(greeting1);
+
+    if(age < 0){
+        return greeting1
+    }
+    else {
+        throw new Error ('Not Valid!');
+    }
+
