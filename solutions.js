@@ -7,6 +7,12 @@ function getYearOfBirth(age){
 }
 
 function createGreeting (name, age ){ 
+    if (name === 'undefined' || age === 'undefined'){
+        throw new Error ('undefined values');
+    }
+    if (typeof name !== 'string' || typeof age !== 'number'){
+        throw new TypeError("invalid type");
+    }
     const yearOfBirth = 2019 - age;
     return `Hi, my name is Josephine and I\'m 22 years old. I was born in ${yearOfBirth}.`; 
 };
@@ -18,10 +24,4 @@ try{
 }
 console.log(greeting1);
 
-    if(age < 0){
-        return greeting1
-    }
-    else {
-        throw new Error ('Not Valid!');
-    }
-
+  
